@@ -1,0 +1,693 @@
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+@font-face {
+  font-family: 'VCR OSD Mono';
+  src: url('../css/fonts/VCR_OSD_MONO_1.001.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.panel {
+  font-family: 'VCR OSD Mono', 'Press Start 2P', monospace;
+  text-transform: uppercase;
+  color: #00ff00;
+}
+
+.panel h2 {
+  animation: glitchBox 2s infinite;
+  background: rgba(0, 0, 0, 0.95);
+  border: 2px solid #00ff37;
+  box-sizing: border-box;
+  color: #e0fee1;
+  font-size: 2rem;
+  left: 20px;
+  line-height: 0.8;
+  margin: 0;
+  padding: 0.1rem;
+  position: relative;
+  text-shadow: 2px 2px #ff00ff;
+  text-transform: uppercase;
+  top: -20px;
+  width: fit-content;
+  will-change: transform, text-shadow;
+}
+
+.panel p {
+  color: #2b4842;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.panel p + p {
+  margin-top: 0.5rem;
+}
+
+.panel ul {
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+.panel ul li {
+  color: #191b1b;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  margin-bottom: 0.3rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.panel ul li::before {
+  color: #ff00ff;
+  content: '→';
+  left: 0;
+  position: absolute;
+}
+
+.panel a {
+  color: #00ffff;
+  font-size: 0.7rem;
+  position: relative;
+  text-decoration: none;
+  transition: all 0.1s ease;
+}
+
+.panel a:hover {
+  color: #ff00ff;
+  transform: translateX(2px);
+}
+
+.tagline {
+  color: #888;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.7rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+/* ==========================================================================
+     Base Styles
+     ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f4f6f7;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  opacity: 0.98;
+  overflow-y: auto;
+  position: fixed;
+}
+
+/* ==========================================================================
+     Layout
+     ========================================================================== */
+main.content {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  min-height: 100vh;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.opener {
+  font-family: 'Press Start 2P', cursive;
+  padding: 20px;
+  position: fixed;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+}
+
+.home-section {
+  left: 110%;
+  position: fixed;
+  top: 55%;
+  transform: translateY(-50%);
+  width: 700px;
+  z-index: 20;
+}
+
+/* ==========================================================================
+     Circle Visual
+     ========================================================================== */
+.left-section {
+  background: radial-gradient(circle, #222, #000);
+  border-radius: 50%;
+  height: 850px;
+  left: 0;
+  min-width: 450px;
+  opacity: 0.5;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 850px;
+  z-index: 1;
+}
+
+/* ==========================================================================
+     Instruction
+     ========================================================================== */
+#instruction {
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 1px;
+  bottom: 3rem;
+  color: #00ff00;
+  display: block;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.6rem;
+  left: 50%;
+  opacity: 1;
+  padding: 0.5rem;
+  position: fixed;
+  text-transform: uppercase;
+  transform: translateX(-50%);
+  transition: all 0.3s ease;
+  visibility: visible;
+  z-index: 99;
+}
+
+#profile:target ~ #instruction,
+#skills:target ~ #instruction,
+#projects:target ~ #instruction,
+#phpdemo:target ~ #instruction {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-50%) translateY(20px);
+  pointer-events: none;
+}
+
+/* Show instruction when home is targeted */
+#home:target ~ #instruction {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+
+/* ==========================================================================
+     Panel Container and Panels
+     ========================================================================== */
+.panel-container {
+  justify-content: center;
+  max-width: 200px;
+  padding: 2rem;
+  pointer-events: auto;
+  position: relative;
+  width: 100%;
+  z-index: 40;
+}
+
+.panel {
+  background-color: rgba(252, 249, 249);
+  border: 4px solid #ff00ff;
+  border-radius: 1px;
+  box-shadow: 8px 8px 0 #00ff00;
+  display: none;
+  height: auto;
+  left: 110%;
+  max-width: 1200px;
+  opacity: 0;
+  padding: 0.5rem;
+  position: fixed;
+  top: 280px;
+  transform: translateX(-50%);
+  width: 80%;
+  z-index: 99;
+}
+
+#profile:target,
+#skills:target,
+#projects:target,
+#phpdemo:target {
+  animation: pulseBorder 2s infinite ease-in-out;
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%);
+}
+
+#profile:target h2,
+#skills:target h2,
+#projects:target h2,
+#phpdemo:target h2 {
+  animation: glitchBox 5s infinite alternate;
+}
+
+#home:target ~ .panel,
+:not(:target) ~ .panel {
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.anchor-target {
+  height: 0;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  visibility: hidden;
+  width: 0;
+}
+
+/* ==========================================================================
+     Panel Close Button
+     ========================================================================== */
+.panel-close {
+  align-items: center;
+  background: black;
+  border: 2px solid #ff00ff;
+  border-radius: 20%;
+  color: #ff00ff;
+  cursor: pointer;
+  display: flex;
+  font-family: 'Press Start 2P', Arial, sans-serif;
+  font-size: 4rem;
+  height: 20px;
+  justify-content: center;
+  left: 620px;
+  line-height: 0.7;
+  padding: 5px 10px;
+  position: absolute;
+  text-decoration: none;
+  top: 5px;
+  transition: all 0.3s ease;
+  width: 20px;
+  z-index: 42;
+}
+
+.panel-close:hover {
+  border-color: #00ffcc;
+  color: #00ffcc;
+  text-shadow: 0 0 5px rgba(0, 255, 204, 0.7);
+  transform: scale(1.1);
+}
+
+/* ==========================================================================
+     Profile Section
+     ========================================================================== */
+.profile-image {
+  border: 4px solid #ff00ff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #000, 0 0 0 4px #00ff00, 0 0 15px rgba(0, 255, 0, 0.5),
+    0 0 25px rgba(255, 0, 255, 0.3);
+  display: block;
+  filter: brightness(1.1) contrast(1.1);
+  height: 200px;
+  margin: 2rem auto;
+  max-width: 300px;
+  object-fit: cover;
+  object-position: center 20%;
+  position: relative;
+  top: 10px;
+  transition: all 0.3s ease;
+  width: 200px;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.btn-icon {
+  align-items: center;
+  background: #000;
+  border: 3px solid #00ff00;
+  clip-path: polygon(
+    0 4px,
+    4px 4px,
+    4px 0,
+    calc(100% - 4px) 0,
+    calc(100% - 4px) 4px,
+    100% 4px,
+    100% calc(100% - 4px),
+    calc(100% - 4px) calc(100% - 4px),
+    calc(100% - 4px) 100%,
+    4px 100%,
+    4px calc(100% - 4px),
+    0 calc(100% - 4px)
+  );
+  display: inline-flex;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.7rem;
+  gap: 0.8rem;
+  overflow: visible;
+  padding: 0.8rem 1.2rem;
+  position: relative;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  z-index: 30;
+}
+
+.btn-icon::before {
+  bottom: -2px;
+  content: '';
+  left: -2px;
+  opacity: 0;
+  position: absolute;
+  right: -2px;
+  top: -2px;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.btn-icon img {
+  height: 30px;
+  image-rendering: pixelated;
+  transition: transform 0.3s ease;
+  width: 30px;
+}
+
+.btn-icon:hover {
+  background: #103948;
+  box-shadow: 4px 4px 0 #00ff00;
+  color: #00ff00;
+  transform: translate(-2px, -2px);
+}
+
+.btn-icon:hover::before {
+  opacity: 0.2;
+}
+
+.btn-icon:active {
+  box-shadow: 0 0 0 #00ff00;
+  transform: translate(0, 0);
+}
+
+/* ==========================================================================
+     PHP Demo Section
+     ========================================================================== */
+/* Base panel styling */
+#phpdemo {
+  background: rgba(252, 249, 249, 0.95);
+  padding: 1rem; /* Reduced padding */
+}
+
+/* Container for toggle sections */
+.demo-container {
+  max-width: 500px; 
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Toggle buttons container */
+.input-toggle {
+  display: flex;
+  gap: 0.3rem; /* Smaller gap */
+  justify-content: flex-end;
+  margin-bottom: 0.5rem; /* Reduced margin */
+  z-index: 10;
+}
+
+/* Toggle button styling */
+.toggle-btn {
+  background: rgba(12, 12, 12, 0.95);
+  color: #00ff00;
+  border: 1px solid #00ff00; /* Thinner border */
+  padding: 0.3rem 0.6rem; /* Smaller padding */
+  font-family: 'VCR OSD Mono', monospace;
+  font-size: 0.6rem; /* Smaller font */
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+}
+
+.toggle-btn:hover {
+  background: #103948;
+  transform: translate(-1px, -1px); /* Smaller transform */
+  box-shadow: 1px 1px 0 #00ff00; /* Smaller shadow */
+}
+
+.toggle-btn.active {
+  background: #101010;
+  border-color: #00ffcc;
+  box-shadow: 1px 1px 0 #00ff00;
+}
+
+/* Form section basePx styling */
+.form-section {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(5px); /* Smaller transform */
+}
+
+.form-section.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Form styling */
+.phpdemo-form {
+  background: rgba(22, 23, 23, 0.95);
+  border: 0.5px solid #00ff00; 
+  border-radius: 0.5px; 
+  padding: 0.4rem; 
+  box-shadow: 2px 2px 0 #00ff00; 
+}
+
+.phpdemo-form h3 {
+  color: #0afa0a;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1rem; 
+  text-align: center;
+  text-shadow: 1px 1px #000; 
+  
+}
+
+.phpdemo-form label {
+  color: #00ffff;
+  font-family: 'VCR OSD Mono', monospace;
+  font-size: 0.6rem; 
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.3rem; 
+}
+
+/* Input fields */
+.phpdemo-form input[type="text"],
+.phpdemo-form input[type="number"] {
+  width: 100%;
+  padding: 0.3rem;
+  background: #faf9f9;
+  border: 1px solid #00ff00; /* Thinner border */
+  color: #131313;
+  font-family: 'VCR OSD Mono', monospace;
+  font-size: 0.6rem; /* Smaller font */
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.phpdemo-form input[type="text"]:focus,
+.phpdemo-form input[type="number"]:focus {
+  outline: none;
+  border-color: #00ffcc;
+  box-shadow: 0 0 5px rgba(0, 255, 204, 0.3); /* Smaller glow */
+}
+
+/* Submit buttons */
+.phpdemo-form input[type="submit"] {
+  background: #f8f6f6;
+  margin-top: 5px;
+  border: 2px solid #00ff00; 
+  color: #00ff00;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.6rem;
+  padding: 0.5rem 0.8rem; 
+  cursor: pointer;
+  transition: all 0.2s ease;
+  clip-path: polygon(
+    0 3px,
+    3px 3px,
+    3px 0,
+    calc(100% - 3px) 0,
+    calc(100% - 3px) 3px,
+    100% 3px,
+    100% calc(100% - 3px),
+    calc(100% - 3px) calc(100% - 3px),
+    calc(100% - 3px) 100%,
+    3px 100%,
+    3px calc(100% - 3px),
+    0 calc(100% - 3px)
+  );
+}
+
+.phpdemo-form input[type="submit"]:hover {
+  background: #1c6580;
+  box-shadow: 2px 2px 0 #00ff00;
+  transform: translate(-1px, -1px); 
+}
+
+/* Results display */
+.results {
+  margin-top: 0.1rem;
+  padding: 0.2rem; 
+  background: rgba(252, 251, 251, 0.95);
+  border: 1px solid #00ff00; /* Thinner border */
+  border-radius: 3px; /* Smaller radius */
+  color: #00ff00;
+  font-family: 'VCR OSD Mono', monospace;
+  font-size: 0.6rem; /* Smaller font */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.results.active {
+  opacity: 1;
+}
+
+/* Error messages */
+.phpdemo-form .error {
+  color: #ff00ff;
+  font-size: 0.5rem; /* Smaller font */
+  padding: 0.3rem; /* Smaller padding */
+  border: 1px solid #ff00ff; /* Thinner border */
+  background: rgba(255, 0, 255, 0.1); 
+}
+
+/* Paragraph text */
+#phpdemo p {
+  font-size: 0.7rem; 
+  line-height: 1.4; 
+  color: #2b4842;
+  margin-bottom: 0.5rem; 
+}
+
+
+/* ==========================================================================
+     Footer
+     ========================================================================== */
+footer {
+  background: transparent;
+  bottom: 0;
+  color: #00ff00;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.9rem;
+  left: 0;
+  line-height: 2rem;
+  margin-top: auto;
+  padding: 1rem;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  z-index: 100;
+}
+
+footer a {
+  color: #ff00ff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  text-shadow: 2px 2px 0 #00ff00;
+}
+
+/* ==========================================================================
+     Animations
+     ========================================================================== */
+@keyframes panelFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes pulseBorder {
+  0% {
+    border-color: #ff00ff;
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.5), 8px 8px 0 #00ff00;
+    transform: translateY(0);
+  }
+  50% {
+    border-color: #00ffcc;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.7), 8px 8px 0 #00ffcc;
+    transform: translateY(-2px);
+  }
+  100% {
+    border-color: #ff00ff;
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.5), 8px 8px 0 #00ff00;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glitchBox {
+  0% {
+    text-shadow: 2px 2px #ff00ff;
+    transform: translate(0);
+  }
+  25% {
+    text-shadow: -2px 2px #00ffcc;
+    transform: translate(-2px, 2px);
+  }
+  50% {
+    text-shadow: 2px -2px #ff00ff;
+    transform: translate(2px, -2px);
+  }
+  75% {
+    text-shadow: -2px -2px #00ffcc;
+    transform: translate(-2px, -2px);
+  }
+  100% {
+    text-shadow: 2px 2px #ff00ff;
+    transform: translate(0);
+  }
+}
+
+/* ==========================================================================
+     Media Queries
+     ========================================================================== */
+@media (max-width: 768px) {
+  .panel {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .btn-icon {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .profile-image {
+    max-width: 150px;
+  }
+}

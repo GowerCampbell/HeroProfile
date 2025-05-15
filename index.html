@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HeroDeveloperProfile</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/neon-header.css" />
+    <link rel="stylesheet" href="css/planetAnimation.css" />
+  </head>
+  <body>
+    <header class="header-wrapper">
+      <h1
+        class="neon-text"
+        data-text="Web/Software Developer: Can You be a Hero?"
+      >
+        Web/Software Developer: Can You be a Hero?
+      </h1>
+    </header>
+
+    <main class="content">
+      <!-- LEFT VISUAL SECTION -->
+      <div class="left-section">
+        <div class="circle"></div>
+
+        <!-- Image Assets -->
+        <img
+          src="assets/images/bluetint.png"
+          alt="bluetint"
+          class="circle-bluetint"
+        />
+        <img src="assets/images/cloud.png" alt="cloud" class="circle-cloud" />
+        <img
+          src="assets/images/greencloud.png"
+          alt="greencloud"
+          class="circle-greencloud"
+        />
+        <img
+          src="assets/images/cloud3.png"
+          alt="cloud3"
+          class="circle-cloud3"
+        />
+        <img
+          src="assets/images/cloud2.png"
+          alt="cloud2"
+          class="circle-cloud2"
+        />
+        <img
+          src="assets/images/cloud1.png"
+          alt="cloud1"
+          class="circle-cloud1"
+        />
+        <img
+          src="assets/images/rocket.png"
+          alt="rocket"
+          class="circle-rocket"
+        />
+        <img
+          src="assets/images/greenwhitecloud.png"
+          alt="greenwhitecloud"
+          class="circle-greenwhitecloud"
+        />
+        <img
+          src="assets/images/cloud5.png"
+          alt="cloud5"
+          class="circle-cloud5"
+        />
+        <img
+          src="assets/images/greengarden2.png"
+          alt="greenborder"
+          class="circle-garden"
+        />
+        <img
+          src="assets/images/cloudpart2.2.png"
+          alt="cloud2.2"
+          class="circle-cloud4"
+        />
+        <img
+          src="assets/images/yellowstar.png"
+          alt="yellowparticles"
+          class="circle-yellow"
+        />
+        <img src="assets/images/wand2.png" alt="wand" class="circle-wand" />
+        <img
+          src="assets/images/cloudparts.png"
+          alt="cloudpart"
+          class="circle-cloudpart"
+        />
+        <img src="assets/images/moon3.png" alt="moon" class="circle-moon" />
+        <img
+          src="assets/images/greenmoon.png"
+          alt="greenmoon"
+          class="circle-greenmoon"
+        />
+        <img
+          src="assets/images/whitestar.png"
+          alt="whitestars"
+          class="circle-whitestars"
+        />
+        <img
+          src="assets/images/greenstar.png"
+          alt="greenstars"
+          class="circle-greenstars"
+        />
+        <img
+          src="assets/images/redstars.png"
+          alt="redstars"
+          class="circle-redstars"
+        />
+        <img
+          src="assets/images/bluestar.png"
+          alt="bluestars"
+          class="circle-stars"
+        />
+        <img src="assets/images/star.png" alt="stars" class="circle-stars" />
+        <img
+          src="assets/images/ringedplanet.png"
+          alt="ringplanet"
+          class="circle-ringedplanet"
+        />
+
+        <!-- BUTTONS TO TRIGGER PANELS -->
+
+        <a href="#profile" class="planet1" data-panel="profile">
+          <div class="planet-container">
+            <span class="planet-text">Profile</span>
+          </div>
+        </a>
+        <a href="#skills" class="planet2" data-panel="skills">
+          <div class="planet-container">
+            <span class="planet-text">Skills</span>
+          </div>
+        </a>
+        <a href="#projects" class="planet3" data-panel="projects">
+          <div class="planet-container">
+            <span class="planet-text">Projects</span>
+          </div>
+        </a>
+        <a href="#phpdemo" class="planet4" data-panel="phpdemo">
+          <div class="planet-container">
+            <span class="planet-text">PHP_Demo</span>
+          </div>
+        </a>
+
+        <!-- INVISIBLE ANCHOR TARGETS (stop scroll jump) -->
+        <div class="anchor-targets">
+          <div id="target-profile" class="anchor-target"></div>
+          <div id="target-skills" class="anchor-target"></div>
+          <div id="target-projects" class="anchor-target"></div>
+          <div id="target-phpdemo" class="anchor-target"></div>
+          <div id="home" class="anchor-target"></div>
+        </div>
+
+        <div id="instruction">
+          <p>Select a planet to view details!</p>
+        </div>
+
+        <!-- HOME SECTION -->
+        <section class="home-section">
+          <!-- Profile Card -->
+          <article class="profile-card">
+            <figure class="profile-image-container">
+              <img
+                src="assets/icons/profile.jpg"
+                alt="Gower at desk"
+                class="profile-image"
+              />
+              <figcaption class="tagline">
+                "My secret identity/brand: CodeCamper"
+              </figcaption>
+            </figure>
+
+            <!-- Social Links -->
+            <nav class="social-links">
+              <div class="button-group">
+                <a
+                  href="https://www.linkedin.com/in/gower-campbell-16940115b/"
+                  target="_blank"
+                  class="btn-icon"
+                >
+                  <img src="./assets/icons/linkedin.png" alt="linkedin" />
+                  <span>LinkedIn</span></a
+                >
+                <a
+                  href="https://github.com/GowerCampbell"
+                  target="_blank"
+                  class="btn-icon"
+                >
+                  <img src="./assets/icons/github.png" alt="github" />
+                  <span>GitHub</span></a
+                >
+                <a
+                  href="https://www.google.com/search?q=Gower+Campbell+developer"
+                  target="_blank"
+                  class="btn-icon"
+                >
+                  <img src="./assets/icons/google.png" alt="Google Search" />
+                  <span>Google Me</span></a
+                >
+              </div>
+            </nav>
+          </article>
+        </section>
+
+        <section class="panel" id="profile">
+          <a href="#home" class="panel-close">×</a>
+          <h2>Here's your Hero's Journey!</h2>
+          <p class="paragraph-space">
+            "Enter a another world, where
+            <strong>everyone can have the 'Superpower' to be a Hero</strong>"
+          </p>
+
+          <p>
+            Empowered by artifice, go to the next level of whats possible and
+            start making for yourself the tools, armour and pages of your next
+            story. Taking the step to see how coding is created and read will
+            unlock the limitless possibties from staging your ideas, to making
+            real change for others. But with
+            <strong>great power comes great responsibility</strong> Be the
+            developer that builds with purpose, and keeps a mind sharp through
+            learning, community, and a healthy dose of omega-3s.
+          </p>
+
+          <p>
+            <strong>Here's a Fun fact:</strong> I believe programming and
+            storytelling share a core principle: both require logic and
+            creativity to craft something meaningful.
+          </p>
+          <p></p>
+        </section>
+
+        <section class="panel" id="skills">
+          <a href="#home" class="panel-close">×</a>
+          <h2>Learning New Skills</h2>
+          <p>
+            The secret to your superpower is a strong mind to handle the power
+            of being a <strong>HERO</strong> become skilled in using mental
+            techniques like building upon your active recall to strengethn your
+            synapses, eventually shaping your mindscape into a mind palace when
+            hearing yourself aloud and journalling. Its the spaced repetition
+            within a Pomodoro of thoughts that will cluster and
+            <strong>CHUNK</strong> so that that it diffuses when your finished
+            focusing on your new skills
+          </p>
+
+          <ul>
+            <li>Python: OOP, Scripting, Data analysis</li>
+            <li>PHP: Web Servers, Deployment, Testing</li>
+            <li>Web Development: Bootstrap, HTML, CSS, Django framework</li>
+            <li>Version Control: Git, GitHub Workflows</li>
+            <li>Command Line: pip, brew & Chocolatey</li>
+          </ul>
+        </section>
+
+        <section class="panel" id="projects">
+          <a href="#home" class="panel-close">×</a>
+          <h2>Featured Projects</h2>
+          <p>
+            Start by building what you want to make? Ask yourself what would
+            make your life easier? Then automate tasks, create productive
+            routines and build with others
+          </p>
+          <ul>
+            <li>
+              <strong>Mossy Music Player</strong>: A pixel-art themed music
+              player for Windows built with Python and Tkinter.<br />
+              <a
+                href="https://github.com/GowerCampbell/mossy-music-player"
+                target="_blank"
+                >View Repository</a
+              >
+            </li>
+            <li>
+              <strong>Blueberry Timer Tool</strong>: A Pomodoro timer designed
+              to help neurodivergent users stay focused with natural visuals and
+              session planning.<br />
+              <a
+                href="https://github.com/GowerCampbell/blueberry-timer"
+                target="_blank"
+                >View Repository</a
+              >
+            </li>
+            <li>
+              <strong>PawLock</strong>: A playful desktop lock screen that
+              protects your computer when you step away, using a digital cat
+              paw.<br />
+              <a href="https://github.com/GowerCampbell/pawlock" target="_blank"
+                >View Repository</a
+              >
+            </li>
+          </ul>
+        </section>
+
+        <section class="panel" id="phpdemo">
+          <a href="#home" class="panel-close">×</a>
+          <h2>Demo Functionality</h2>
+          <p>
+            Preprocessing Hypertext by using PHP to share user input with
+            strings and integers—perfect for showcasing what you can do with
+            input validation and form handling on the server side.
+          </p>
+
+          <div class="demo-container">
+            <!-- Toggle Buttons -->
+            <div class="input-toggle">
+              <button class="toggle-btn active" data-target="string">
+                String Input
+              </button>
+              <button class="toggle-btn" data-target="number">
+                Number Input
+              </button>
+            </div>
+
+            <!-- String Section -->
+            <div class="form-section active" id="string-section">
+              <form
+                id="string-form"
+                class="phpdemo-form"
+                action="strings.php"
+                method="POST"
+              >
+                <h3>String Transformer</h3>
+                <label for="sentence">Enter a sentence:</label>
+                <input type="text" id="sentence" name="sentence" required />
+                <label for="string-operation">Select Operation:</label>
+                <select id="string-operation" name="operation" required>
+                  <option value="uppercase">All Uppercase</option>
+                  <option value="lowercase">All Lowercase</option>
+                  <option value="first_upper">First Character Uppercase</option>
+                  <option value="words_upper">
+                    First Character of Each Word Uppercase
+                  </option>
+                  <option value="all">All Transformations</option>
+                </select>
+                <input type="submit" value="Transform" class="stringphp" />
+                <div id="string-results" class="results"></div>
+              </form>
+            </div>
+
+            <!-- Number Section -->
+            <div class="form-section" id="number-section">
+              <form
+                id="numeric-form"
+                class="phpdemo-form"
+                action="numbers.php"
+                method="POST"
+              >
+                <h3>Numeric Calculator</h3>
+                <div class="input-group">
+                  <label for="num1">Number 1:</label>
+                  <input
+                    type="number"
+                    id="num1"
+                    name="num1"
+                    step="any"
+                    required
+                  />
+                </div>
+                <div class="input-group">
+                  <label for="num2">Number 2:</label>
+                  <input
+                    type="number"
+                    id="num2"
+                    name="num2"
+                    step="any"
+                    required
+                  />
+                </div>
+                <div class="input-group">
+                  <label for="num3">Number 3:</label>
+                  <input
+                    type="number"
+                    id="num3"
+                    name="num3"
+                    step="any"
+                    required
+                  />
+                </div>
+                <div class="input-group">
+                  <label for="num4">Number 4:</label>
+                  <input
+                    type="number"
+                    id="num4"
+                    name="num4"
+                    step="any"
+                    required
+                  />
+                </div>
+                <label for="numeric-operation">Select Operation:</label>
+                <select id="numeric-operation" name="operation" required>
+                  <option value="add">Addition</option>
+                  <option value="subtract">Subtraction</option>
+                  <option value="multiply">Multiplication</option>
+                  <option value="divide">Division</option>
+                  <option value="combine">Combination</option>
+                  <option value="all">All Operations</option>
+                </select>
+                <input type="submit" value="Calculate" class="numbersphp" />
+                <div id="numeric-results" class="results"></div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        Contact:
+        <a href="mailto:Gower.Campbell@gmail.com">Gower.Campbell@gmail.com</a>
+      </p>
+      <p>© 2025 Gower Campbell | All rights reserved.</p>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const toggleButtons = document.querySelectorAll('.toggle-btn');
+        const stringSection = document.getElementById('string-section');
+        const numberSection = document.getElementById('number-section');
+        const stringForm = document.getElementById('string-form');
+        const numericForm = document.getElementById('numeric-form');
+        const stringResults = document.getElementById('string-results');
+        const numericResults = document.getElementById('numeric-results');
+
+        // Toggle between string and number sections
+        toggleButtons.forEach((button) => {
+          button.addEventListener('click', () => {
+            toggleButtons.forEach((btn) => btn.classList.remove('active'));
+            stringSection.classList.remove('active');
+            numberSection.classList.remove('active');
+
+            button.classList.add('active');
+            const target = button.getAttribute('data-target');
+            document
+              .getElementById(`${target}-section`)
+              .classList.add('active');
+          });
+        });
+
+        // Handle string form submission with AJAX
+        stringForm.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          stringResults.textContent = 'Processing...';
+          stringResults.classList.add('active');
+          const formData = new FormData(stringForm);
+          try {
+            const response = await fetch('strings.php', {
+              method: 'POST',
+              body: formData,
+            });
+            if (!response.ok)
+              throw new Error(`HTTP error! Status: ${response.status}`);
+            const text = await response.text();
+            stringResults.textContent = text || 'No results returned';
+            stringResults.classList.add('active');
+          } catch (error) {
+            stringResults.textContent = `Error: ${error.message}`;
+            stringResults.classList.add('active');
+          }
+        });
+
+        // Handle numeric form submission with AJAX
+        numericForm.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          numericResults.textContent = 'Processing...';
+          numericResults.classList.add('active');
+          const formData = new FormData(numericForm);
+          try {
+            const response = await fetch('numbers.php', {
+              method: 'POST',
+              body: formData,
+            });
+            if (!response.ok)
+              throw new Error(`HTTP error! Status: ${response.status}`);
+            const text = await response.text();
+            numericResults.textContent = text || 'No results returned';
+            numericResults.classList.add('active');
+          } catch (error) {
+            numericResults.textContent = `Error: ${error.message}`;
+            numericResults.classList.add('active');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

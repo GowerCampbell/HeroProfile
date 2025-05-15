@@ -1,0 +1,327 @@
+/* ==========================================================================
+   Circle Background Section
+   ========================================================================== */
+   .circle {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 9);
+    border-radius: 50%;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+    image-rendering: pixelated;
+    z-index: 30;
+  }
+  
+  /* ==========================================================================
+     Celestial Elements
+     ========================================================================== */
+  .circle-bluetint {
+    position: absolute;
+    top: 80%;
+    left: 11%;
+    z-index: -2;
+  }
+  
+  .circle-yellow {
+    position: absolute;
+    top: 76%;
+    left: 45%;
+    z-index: 1;
+  }
+  
+  .circle-moon {
+    position: absolute;
+    top: 53%;
+    left: 53%;
+    z-index: 3;
+    animation: sideToSide 10s ease-in-out infinite;
+  }
+  
+  .circle-greenmoon {
+    position: absolute;
+    top: 40%;
+    left: 103%;
+    z-index: 3;
+    animation: sideToSide 10s ease-in-out infinite;
+  }
+  
+  .circle-ringedplanet {
+    position: absolute;
+    top: 38%;
+    left: 15%;
+    z-index: 3;
+  }
+  
+  /* ==========================================================================
+     Star Elements
+     ========================================================================== */
+  .circle-stars {
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    top: 10%;
+    left: 30%;
+    z-index: 3;
+  }
+  
+  .circle-whitestars {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    z-index: 1;
+  }
+  
+  .circle-greenstars {
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    top: 50%;
+    left: 67%;
+    z-index: 3;
+  }
+  
+  .circle-redstars {
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    top: 30%;
+    left: 30%;
+    z-index: 3;
+  }
+  
+  .circle-bluestars {
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    top: 35%;
+    left: 35%;
+    z-index: 3;
+  }
+  
+  /* ==========================================================================
+     Cloud Elements
+     ========================================================================== */
+  .circle-cloud {
+    position: absolute;
+    top: 75%;
+    left: 83%;
+    z-index: 2;
+    animation: sideToSide 10s ease-in-out infinite;
+  }
+  
+  .circle-greencloud {
+    position: absolute;
+    top: 74%;
+    left: 36%;
+    z-index: 1;
+    transform: rotate(5deg);
+  }
+  
+  .circle-cloud1 {
+    position: absolute;
+    top: 93%;
+    left: 66%;
+    z-index: 0;
+    animation: sideToSide 11s ease-in-out infinite;
+  }
+  
+  .circle-cloud2 {
+    position: absolute;
+    top: 84%;
+    left: 66%;
+    z-index: 2;
+    animation: sideToSide 9s ease-in-out infinite;
+  }
+  
+  .circle-cloud3 {
+    position: absolute;
+    top: 87%;
+    left: 70%;
+    z-index: 1;
+    animation: sideToSide 8s ease-in-out infinite;
+  }
+  
+  .circle-cloud4 {
+    position: absolute;
+    top: 19.5%;
+    left: 90%;
+    z-index: 34;
+    animation: sideToSide 10s ease-in-out infinite;
+  }
+  
+  .circle-cloud5 {
+    position: absolute;
+    top: 41%;
+    left: 65%;
+    z-index: 1;
+    animation: sideToSide 10s ease-in-out infinite;
+  }
+  
+  .circle-greenwhitecloud {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    z-index: 2;
+    animation: sideToSide 8s ease-in-out infinite;
+  }
+  
+  .circle-cloudpart {
+    position: absolute;
+    top: 83%;
+    left: 4%;
+    z-index: 3;
+  }
+  
+  /* ==========================================================================
+     Other Elements
+     ========================================================================== */
+  .circle-rocket {
+    position: absolute;
+    top: 70%;
+    left: 70%;
+    z-index: 0;
+    transform: rotate(16deg);
+  }
+  
+  .circle-garden {
+    position: absolute;
+    top: 1%;
+    left: 60%;
+    z-index: 33;
+    transform: rotate(25deg);
+  }
+  
+  .circle-wand {
+    position: absolute;
+    top: 48.5%;
+    left: 90%;
+    z-index: 1;
+  }
+  
+  /* ==========================================================================
+     Planet Buttons
+     ========================================================================== */
+  .planet-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .planet-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: "Press Start 2P", cursive;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    padding: 0.4rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    margin: 0;
+    width: 100px;
+  }
+  
+  .planet1,
+  .planet2,
+  .planet3,
+  .planet4 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: filter 0.3s ease;
+    z-index: 40;
+  }
+  
+  .planet1 {
+    background-image: url('../assets/images/blueplanet1.png');
+    animation: floatAnimation 8s infinite;
+    top: 28%;
+    left: 80%;
+  }
+  
+  .planet2 {
+    background-image: url('../assets/images/greenplanet2.png');
+    animation: floatAnimation 5s infinite;
+    top: 42%;
+    left: 70%;
+  }
+  
+  .planet3 {
+    background-image: url('../assets/images/planet1.png');
+    width: 100px;
+    height: 100px;
+    animation: floatAnimation 6s infinite;
+    top: 58%;
+    left: 90%;
+  }
+  
+  .planet4 {
+    background-image: url('../assets/images/phplanet.png');
+    width: 100px;
+    height: 100px;
+    animation: floatAnimation 7s infinite;
+    top: 65%;
+    left: 60%;
+  }
+  
+  .planet1:hover,
+  .planet2:hover,
+  .planet3:hover,
+  .planet4:hover,
+  .planet-container:hover {
+    filter: drop-shadow(0 0 10px rgba(0, 200, 255, 0.8)) brightness(1.2);
+  }
+  
+  /* ==========================================================================
+     Animations
+     ========================================================================== */
+  @keyframes sideToSide {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(10px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes floatAnimation {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  /* ==========================================================================
+     Media Queries
+     ========================================================================== */
+  @media (max-width: 768px) {
+    .left-section {
+      display: none;
+    }
+  }

@@ -1,0 +1,38 @@
+[Header Section]
+Name: Gower Campbell
+Title: Web | Software Developer
+Tagline: "CodeCamper"
+Links:
+- LinkedIn: [https://www.linkedin.com/in/gower-campbell-16940115b/]
+- GitHub: [https://github.com/GowerCampbell]
+
+[Hero Section]
+- A space for a profile image of myself at my work desk.
+- Hobbies: I'm a reader, storyteller, and volunteer. My time working as a teaching assistant in schools has shown me the importance of sharing those experiences to inspire others. I'm about keeping my mind active through learning new skills, staying social, and connecting with friends, family, and the community.
+
+I believe the things we eat greatly impact both our body and brain. I have a love for fish and omega-3-rich foods, which are vital for maintaining brain health and boosting the ability to learn and remember. I enjoy coming up with imaginative ideas, staying joyful and relaxed, and responsibly attending to what needs to be done.
+
+Exploring my inner superpowers and the worlds that spark creativity is a journey I cherish. As part of my mission as a hero, I aim to ensure everyone is healthy and thriving
+
+- A fun fact: "I believe programming and storytelling share a core principle: both require logical reasoning and creativity to craft engaging, functional, and impactful results."
+
+[Skills Section]
+Key Skills:
+1. Python (Object-oriented programming & data analysis)
+2. Web Development (HTML, CSS, Django Framework)
+3. Troubleshooting (Chocolatey/Brew, pip, Ubuntu setups)
+
+[Featured Projects Section]
+1. Mossy Music Player - A pixel-art inspired music player design.
+2. Blueberry Timer Tool - Nature-themed Pomodoro session tool.
+3. PawLock - Never worry about leaving your computer on its own again with my pawlock.
+
+[PHP Control Section Placeholder]
+Demo Functionality:
+- String Input: User inputs and processes a string.
+- Integer Input: User inputs and processes an integer.
+
+
+[Footer Section]
+- Contact Information: [Gower.Campbell@gmail.com]
+- Copyright: "© 2025 Gower Campbell | All rights reserved."
