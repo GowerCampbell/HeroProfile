@@ -61,5 +61,4 @@ if (!empty($errors)) {
     echo implode("\n", $errors);
 } else {
     echo implode("\n", $results);
-}
-?>
+} ?>
