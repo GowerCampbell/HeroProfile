@@ -43,6 +43,16 @@
     z-index: 3;
     animation: sideToSide 10s ease-in-out infinite;
   }
+
+  .circle-greenmoon2 {
+    position: absolute;
+    width: 4.5rem;
+    height: 4.5rem;
+    top: 72%;
+    left: 92%;
+    z-index: 3;
+    animation: sideToSide 10s ease-in-out infinite;
+ }
   
   .circle-ringedplanet {
     position: absolute;
@@ -50,6 +60,7 @@
     left: 15%;
     z-index: 3;
   }
+
   
   /* ==========================================================================
      Star Elements
@@ -96,7 +107,27 @@
     left: 35%;
     z-index: 3;
   }
+
+  .circle-greenstar2 {
+    position: absolute;
+    top: 15%;
+    left: 130%;
+    z-index: 3;
+  }
+
+  .circle-moon2 {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 30%;
+    left: 160%;
+    z-index: 3;
+    transform: rotate(20deg);
+
+  }
   
+
+
   /* ==========================================================================
      Cloud Elements
      ========================================================================== */
@@ -155,13 +186,39 @@
     z-index: 1;
     animation: sideToSide 10s ease-in-out infinite;
   }
+
+  .circle-cloud6 {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    z-index: 99;
+    animation: sideToSide 10s ease-in-out infinite;
+  }
   
+  .circle-greencloud2 {
+    position: absolute;
+    top: 5%;
+    left: 45%;
+    z-index: 30;
+    animation: floatAnimation 8s infinite;
+  }
+
   .circle-greenwhitecloud {
     position: absolute;
     top: 15%;
     left: 15%;
     z-index: 2;
     animation: sideToSide 8s ease-in-out infinite;
+  }
+
+  .circle-cloud7 {
+    position: absolute;
+    top: 55%;
+    left: 160%;
+    z-index: 30;
+    animation: sideToSide 10s ease-in-out infinite;
+
+
   }
   
   .circle-cloudpart {
@@ -195,6 +252,15 @@
     top: 48.5%;
     left: 90%;
     z-index: 1;
+  }
+
+  .circle-wand1 {
+    position: absolute;
+    top: 55%;
+    left: 176.5%;
+    z-index: 20;
+    animation: sideToSide 10s ease-in-out infinite;
+    
   }
   
   /* ==========================================================================

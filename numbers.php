@@ -1,6 +1,8 @@
 <?php
 header('Content-Type: text/plain'); // For AJAX compatibility, plain text output
 
+
+
 // Initialize variables
 $results = [];
 $errors = [];

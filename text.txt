@@ -1,38 +1,36 @@
 [Header Section]
 Name: Gower Campbell
-Title: Web | Software Developer
-Tagline: "CodeCamper"
+Title: Web/Software Developer
+Tagline: "My secret identity/brand: CodeCamper"
 Links:
-- LinkedIn: [https://www.linkedin.com/in/gower-campbell-16940115b/]
-- GitHub: [https://github.com/GowerCampbell]
+- LinkedIn: https://www.linkedin.com/in/gower-campbell-16940115b/
+- GitHub: https://github.com/GowerCampbell
+- Google Search: https://www.google.com/search?q=Gower+Campbell+developer
 
 [Hero Section]
-- A space for a profile image of myself at my work desk.
-- Hobbies: I'm a reader, storyteller, and volunteer. My time working as a teaching assistant in schools has shown me the importance of sharing those experiences to inspire others. I'm about keeping my mind active through learning new skills, staying social, and connecting with friends, family, and the community.
-
-I believe the things we eat greatly impact both our body and brain. I have a love for fish and omega-3-rich foods, which are vital for maintaining brain health and boosting the ability to learn and remember. I enjoy coming up with imaginative ideas, staying joyful and relaxed, and responsibly attending to what needs to be done.
-
-Exploring my inner superpowers and the worlds that spark creativity is a journey I cherish. As part of my mission as a hero, I aim to ensure everyone is healthy and thriving
-
-- A fun fact: "I believe programming and storytelling share a core principle: both require logical reasoning and creativity to craft engaging, functional, and impactful results."
+- Profile Image: A space for a profile image of myself at my work desk.
+- Introduction: "Enter a another world, where everyone can have the 'Superpower' to be a Hero"
+- Description: Empowered by artifice, go to the next level of what's possible and start making for yourself the tools, armour and pages of your next story. Taking the step to see how coding is created and read will unlock the limitless possibilities from staging your ideas, to making real change for others. But with great power comes great responsibility. Be the developer that builds with purpose, and keeps a mind sharp through learning, community, and a healthy dose of omega-3s.
+- Fun Fact: I believe programming and storytelling share a core principle: both require logic and creativity to craft something meaningful.
 
 [Skills Section]
 Key Skills:
-1. Python (Object-oriented programming & data analysis)
-2. Web Development (HTML, CSS, Django Framework)
-3. Troubleshooting (Chocolatey/Brew, pip, Ubuntu setups)
+- Python: OOP, Scripting, Data analysis
+- PHP: Web Servers, Deployment, Testing
+- Web Development: Bootstrap, HTML, CSS, Django framework
+- Version Control: Git, GitHub Workflows
+- Command Line: pip, brew & Chocolatey
 
 [Featured Projects Section]
-1. Mossy Music Player - A pixel-art inspired music player design.
-2. Blueberry Timer Tool - Nature-themed Pomodoro session tool.
-3. PawLock - Never worry about leaving your computer on its own again with my pawlock.
+- Mossy Music Player: A pixel-art themed music player for Windows built with Python and Tkinter. Repository: https://github.com/GowerCampbell/mossy-music-player
+- Blueberry Timer Tool: A Pomodoro timer designed to help neurodivergent users stay focused with natural visuals and session planning. Repository: https://github.com/GowerCampbell/blueberry-timer
+- PawLock: A playful desktop lock screen that protects your computer when you step away, using a digital cat paw. Repository: https://github.com/GowerCampbell/pawlock
 
-[PHP Control Section Placeholder]
+[PHP Control Section]
 Demo Functionality:
-- String Input: User inputs and processes a string.
-- Integer Input: User inputs and processes an integer.
-
+- String Input: Transform strings with PHP to showcase server-side input processing and validation. Users can enter a sentence and select one of four operations: convert to all uppercase, all lowercase, first character uppercase, or first character of each word uppercase. Results update dynamically, and users can reset to enter new inputs.
+- Number Input: Perform calculations with PHP using four numbers. Users can select operations like addition, subtraction, multiplication, division, combination, or all operations. Results are displayed, with options to reset and try new inputs.
 
 [Footer Section]
-- Contact Information: [Gower.Campbell@gmail.com]
-- Copyright: "© 2025 Gower Campbell | All rights reserved."
+- Contact Information: Gower.Campbell@gmail.com
+- Copyright: © 2025 Gower Campbell | All rights reserved.
