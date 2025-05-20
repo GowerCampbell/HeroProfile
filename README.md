@@ -4,7 +4,7 @@ Submitted by: [Gower Campbell]
 Date: May 18, 2025
 
 Overview:
-This webpage is a creative portfolio showcasing UI/UX design and PHP functionality. It features a superhero-themed interface with interactive planet navigation and a PHP demo for string/number processing.
+This webpage is a creative portfolio showcasing my UI/UX design and PHP functionality. It features a superhero-themed interface with interactive planet navigation and a PHP demo for string/number processing.
 
 Setup Instructions:
 1. Install XAMPP (https://www.apachefriends.org/).
@@ -18,12 +18,12 @@ Files Included:
 - index.html: Main webpage
 - strings.php: String processing script
 - numbers.php: Numeric calculation script
-- css/: Stylesheets (styles.css, neon-header.css, planetAnimation.css)
+- css/: Stylesheets (styles.css, neon-header.css, planetanimation.css)
 - assets/: Images and icons
 
 Notes:
-- The webpage is not mobile-optimized.
+- The webpage is not mobile-optimized at all.
 - Ensure all assets are in the correct paths.
-- Contact [Your Email] or Kayleigh for support.
+- Contact Gower Campbell.
 
 Thank you for reviewing my submission!

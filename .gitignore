@@ -1,0 +1,54 @@
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor/IDE files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Dependencies and packages
+/vendor/
+/node_modules/
+composer.lock
+package-lock.json
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# XAMPP specific
+/xampp/
+
+# Logs and databases
+*.log
+*.sqlite
+*.db
+
+# Cache and temporary files
+/cache/
+/tmp/
+*.tmp
+*.temp
+*.cache
+
+# Compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Misc
+/docs/
+/dist/
+/build/

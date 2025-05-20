@@ -22,9 +22,9 @@ Key Skills:
 - Command Line: pip, brew & Chocolatey
 
 [Featured Projects Section]
-- Mossy Music Player: A pixel-art themed music player for Windows built with Python and Tkinter. Repository: https://github.com/GowerCampbell/mossy-music-player
-- Blueberry Timer Tool: A Pomodoro timer designed to help neurodivergent users stay focused with natural visuals and session planning. Repository: https://github.com/GowerCampbell/blueberry-timer
-- PawLock: A playful desktop lock screen that protects your computer when you step away, using a digital cat paw. Repository: https://github.com/GowerCampbell/pawlock
+- Mossy Music Player: A pixel-art themed music player for Windows built with Python and Tkinter. Repository: https://github.com/GowerCampbell/MossyMusicPlayer
+- Blueberry Timer Tool: A Pomodoro timer designed to help neurodivergent users stay focused with natural visuals and session planning. Repository:https://github.com/GowerCampbell/BrightBerry-PomodoroApp
+- PawLock: A playful desktop lock screen that protects your computer when you step away, using a digital cat paw. Repository:https://github.com/GowerCampbell/PawLock
 
 [PHP Control Section]
 Demo Functionality:
